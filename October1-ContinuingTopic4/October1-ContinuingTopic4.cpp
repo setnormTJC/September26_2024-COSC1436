@@ -65,17 +65,19 @@ int main()
 
 	cout << std::boolalpha;
 	//cout << !(isRainy) << "\n";
-	if (isRainy || isNight)
+	if (isRainy || isNight) //"compound expression" 
 	{
 		cout << "Slowing down ... bad conditions\n";
 		currentSpeed = currentSpeed - 5; 
 	}
 
-	else
+	else //(/*don't use parentheses with an ELSE*/)
 	{
 		cout << "continuing at current speed (not slowing down)\n";
-		currentSpeed = currentSpeed; 
+		//currentSpeed = currentSpeed; 
+		//do nothing to the currentSpeed 
 	}
+
 	//\|||||| //the "pipe character" means OR (the logical OR)
 	//cout << (isRainy or isNight) << "\n";
 }
